@@ -1,9 +1,14 @@
+/* ============================================
+   Base reset
+   ============================================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* --- Page layout ---
+   Centered content, warm off-white background */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +19,8 @@ body {
     padding: 20px;
 }
 
+/* --- Cards container ---
+   Horizontal row of cards, 24px gap */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +30,8 @@ body {
     align-items: flex-start;
 }
 
+/* --- Single pricing card ---
+   Fixed width, min height, cream background */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +43,13 @@ body {
     flex-shrink: 0;
 }
 
+/* Card header area: title + price + features */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* Plan name (e.g. Hobby, Pro) */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +58,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price row: amount and optional period */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -65,16 +77,19 @@ body {
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Wrapper for "Includes:" + feature list */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* "Includes:" or "Everything in Hobby, plus:" */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* Feature list: no bullets, stacked rows */
 .features-list {
     list-style: none;
     padding: 0;
@@ -88,6 +103,7 @@ body {
     color: #26251e;
 }
 
+/* Checkmark (✓) before each feature */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,6 +111,8 @@ body {
     font-weight: 400;
 }
 
+/* --- Buttons ---
+   Base: pill shape, sits at bottom of card */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -117,6 +135,7 @@ body {
     background-color: #D8D6CE;
 }
 
+/* Primary CTA: dark background, white text */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -130,6 +149,8 @@ body {
     background-color: #333;
 }
 
+/* --- Page label (dev only) ---
+   Fixed badge at top center */
 .page-label {
     position: fixed;
     top: 16px;
